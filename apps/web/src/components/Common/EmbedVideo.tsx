@@ -4,7 +4,7 @@ import type { FC } from 'react'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { FiCode } from 'react-icons/fi'
-import { Analytics, LENSTUBE_EMBED_URL, TRACK } from 'utils'
+import { Analytics, NECTARHUB_EMBED_URL, TRACK } from 'utils'
 import useCopyToClipboard from 'utils/hooks/useCopyToClipboard'
 
 type Props = {
@@ -16,7 +16,7 @@ const EmbedVideo: FC<Props> = ({ videoId, onClose }) => {
   const [showModal, setShowModal] = useState(false)
   const [copy] = useCopyToClipboard()
 
-  const iframeCode = `<iframe width="560" height="315" src="${LENSTUBE_EMBED_URL}/${videoId}" title="Lenstube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;" allowfullscreen></iframe>`
+  const iframeCode = `<iframe width="560" height="315" src="${NECTARHUB_EMBED_URL}/${videoId}" title="Nectarhub video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;" allowfullscreen></iframe>`
 
   const onCopyCode = () => {
     Analytics.track(TRACK.EMBED_VIDEO.COPY)
@@ -48,8 +48,8 @@ const EmbedVideo: FC<Props> = ({ videoId, onClose }) => {
               <iframe
                 sandbox="allow-scripts allow-same-origin"
                 className="aspect-[16/9] w-full"
-                src={`${LENSTUBE_EMBED_URL}/${videoId}`}
-                title="Lenstube video player"
+                src={`${NECTARHUB_EMBED_URL}/${videoId}`}
+                title="Nectarhub video player"
                 allow="accelerometer; autoplay; clipboard-write; gyroscope;"
                 allowFullScreen
               />

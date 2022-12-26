@@ -11,7 +11,7 @@ import {
 import type { FC } from 'react'
 import React from 'react'
 import { useInView } from 'react-cool-inview'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { LENS_CUSTOM_FILTERS, SCROLL_ROOT_MARGIN } from 'utils'
 
 type Props = {
@@ -34,7 +34,7 @@ const ChannelVideos: FC<Props> = ({ channel }) => {
     skip: !channel?.id
   })
 
-  const channelVideos = data?.publications?.items as LenstubePublication[]
+  const channelVideos = data?.publications?.items as NectarhubPublication[]
   const pageInfo = data?.publications?.pageInfo
 
   const { observe } = useInView({

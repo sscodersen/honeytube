@@ -6,7 +6,7 @@ import {
   BUNDLR_METADATA_UPLOAD_URL,
   BUNDLR_PRIVATE_KEY,
   IS_MAINNET,
-  LENSTUBE_APP_NAME
+  NECTARHUB_APP_NAME
 } from 'utils'
 import logger from 'utils/logger'
 
@@ -36,7 +36,7 @@ const upload = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     )
     const tags = [
       { name: 'Content-Type', value: 'application/json' },
-      { name: 'App-Name', value: LENSTUBE_APP_NAME }
+      { name: 'App-Name', value: NECTARHUB_APP_NAME }
     ]
     const { id } = await bundlr.upload(payload, {
       tags

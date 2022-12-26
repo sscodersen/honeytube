@@ -6,10 +6,10 @@ import usePersistStore from '@lib/store/persist'
 import { useRouter } from 'next/router'
 import type { FC } from 'react'
 import React from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 
 type Props = {
-  videos: LenstubePublication[]
+  videos: NectarhubPublication[]
   videoType?: 'Post' | 'Mirror' | 'Comment'
 }
 
@@ -30,7 +30,7 @@ const Timeline: FC<Props> = ({ videos, videoType = 'Post' }) => {
             queuedVideo={queuedVideo}
           />
         ))}
-      {videos?.map((video: LenstubePublication) => {
+      {videos?.map((video: NectarhubPublication) => {
         const isPub = video.__typename === videoType && !video.collectedBy
         return isPub && isComment ? (
           <CommentedVideoCard

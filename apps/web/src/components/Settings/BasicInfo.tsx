@@ -30,8 +30,8 @@ import {
   ERROR_MESSAGE,
   IS_MAINNET,
   LENS_PERIPHERY_ADDRESS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_WEBSITE_URL,
+  NECTARHUB_APP_ID,
+  NECTARHUB_WEBSITE_URL,
   RELAYER_ENABLED,
   TALLY_VERIFICATION_FORM_URL,
   TRACK
@@ -75,7 +75,7 @@ const formSchema = z.object({
   website: z.union([
     z
       .string()
-      .url({ message: 'Enter valid website URL (eg. https://lenstube.xyz)' }),
+      .url({ message: 'Enter valid website URL (eg. https://nectarhub.xyz)' }),
     z.string().max(0)
   ])
 })
@@ -228,7 +228,7 @@ const BasicInfo = ({ channel }: Props) => {
             displayType: PublicationMetadataDisplayTypes.String,
             traitType: 'app',
             key: 'app',
-            value: LENSTUBE_APP_ID
+            value: NECTARHUB_APP_ID
           }
         ],
         metadata_id: uuidv4()
@@ -329,12 +329,12 @@ const BasicInfo = ({ channel }: Props) => {
         </div>
         <div className="flex items-center space-x-2">
           <span>
-            {LENSTUBE_WEBSITE_URL}/{channel.handle}
+            {NECTARHUB_WEBSITE_URL}/{channel.handle}
           </span>
           <button
             className="hover:opacity-60 focus:outline-none"
             onClick={() =>
-              onCopyChannelUrl(`${LENSTUBE_WEBSITE_URL}/${channel.handle}`)
+              onCopyChannelUrl(`${NECTARHUB_WEBSITE_URL}/${channel.handle}`)
             }
             type="button"
           >

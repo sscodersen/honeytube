@@ -9,10 +9,10 @@ const FullPageLoader = () => {
       <MetaTags />
       <div className="animate-pulse">
         <img
-          src={`${STATIC_ASSETS}/images/brand/lenstube.svg`}
+          src={`${STATIC_ASSETS}/images/brand/nectarhub.svg`}
           draggable={false}
           className="w-12 h-12"
-          alt="lenstube"
+          alt="nectarhub"
         />
       </div>
     </div>

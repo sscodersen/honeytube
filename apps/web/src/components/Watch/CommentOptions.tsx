@@ -7,12 +7,12 @@ import type { Dispatch, FC } from 'react'
 import React from 'react'
 import toast from 'react-hot-toast'
 import { AiOutlineDelete } from 'react-icons/ai'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, TRACK } from 'utils'
 
 type Props = {
   setShowReport: Dispatch<boolean>
-  comment: LenstubePublication
+  comment: NectarhubPublication
 }
 
 const CommentOptions: FC<Props> = ({ comment, setShowReport }) => {

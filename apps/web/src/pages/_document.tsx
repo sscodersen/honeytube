@@ -2,7 +2,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
 import { STATIC_ASSETS } from 'utils'
 
-class LenstubeDocument extends Document {
+class NectarhubDocument extends Document {
   render() {
     return (
       <Html lang="en">
@@ -42,4 +42,4 @@ class LenstubeDocument extends Document {
   }
 }
 
-export default LenstubeDocument
+export default NectarhubDocument

@@ -18,8 +18,8 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import type {
   CustomErrorWithData,
-  LenstubeCollectModule,
-  LenstubePublication
+  NectarhubCollectModule,
+  NectarhubPublication
 } from 'utils'
 import {
   Analytics,
@@ -35,7 +35,7 @@ import { useAccount, useContractWrite, useSignTypedData } from 'wagmi'
 import CollectModal from './CollectModal'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
   variant?: 'primary' | 'secondary' | 'material'
 }
 
@@ -71,7 +71,7 @@ const CollectVideo: FC<Props> = ({ video, variant = 'primary' }) => {
     })
   const collectModule =
     data?.publication?.__typename === 'Post'
-      ? (data?.publication?.collectModule as LenstubeCollectModule)
+      ? (data?.publication?.collectModule as NectarhubCollectModule)
       : null
 
   const { write: writeCollectWithSig } = useContractWrite({

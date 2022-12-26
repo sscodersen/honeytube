@@ -4,7 +4,7 @@ import useAppStore from '@lib/store'
 import dynamic from 'next/dynamic'
 import type { FC } from 'react'
 import React from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { getIsSensitiveContent } from 'utils/functions/getIsSensitiveContent'
 import { getPublicationMediaUrl } from 'utils/functions/getPublicationMediaUrl'
 import getThumbnailUrl from 'utils/functions/getThumbnailUrl'
@@ -20,7 +20,7 @@ const VideoPlayer = dynamic(() => import('web-ui/VideoPlayer'), {
 })
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const Video: FC<Props> = ({ video }) => {

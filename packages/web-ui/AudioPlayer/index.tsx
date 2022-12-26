@@ -4,14 +4,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import { BiPause, BiPlay } from 'react-icons/bi'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { GiSpeaker, GiSpeakerOff } from 'react-icons/gi'
-import type { LenstubePublication } from 'utils/custom-types'
+import type { NectarhubPublication } from 'utils/custom-types'
 import { getTimeFromSeconds } from 'utils/functions/formatTime'
 import { getPublicationMediaUrl } from 'utils/functions/getPublicationMediaUrl'
 import getThumbnailUrl from 'utils/functions/getThumbnailUrl'
 import type WaveSurfer from 'wavesurfer.js'
 
 type Props = {
-  selectedTrack: LenstubePublication
+  selectedTrack: NectarhubPublication
 }
 
 const AudioPlayer: FC<Props> = ({ selectedTrack }) => {

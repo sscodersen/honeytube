@@ -4,11 +4,11 @@ import { useReportPublicationMutation } from 'lens'
 import type { FC } from 'react'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
-import type { CustomErrorWithData, LenstubePublication } from 'utils'
+import type { CustomErrorWithData, NectarhubPublication } from 'utils'
 import { Analytics, ERROR_MESSAGE, TRACK } from 'utils'
 
 type Props = {
-  publication: LenstubePublication
+  publication: NectarhubPublication
   onSuccess: () => void
 }
 

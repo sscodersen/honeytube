@@ -88,7 +88,7 @@ export type HLSData = {
   type: string
 }
 
-export type LenstubePublication = Post & Comment & Mirror & { hls: HLSData }
+export type NectarhubPublication = Post & Comment & Mirror & { hls: HLSData }
 
 export type IPFSUploadResult = {
   url: string
@@ -112,7 +112,7 @@ export type ProfileMetadata = {
   attributes: Attribute[]
 }
 
-export type LenstubeCollectModule = FreeCollectModuleSettings &
+export type NectarhubCollectModule = FreeCollectModuleSettings &
   FeeCollectModuleSettings &
   RevertCollectModuleSettings &
   TimedFeeCollectModuleSettings &

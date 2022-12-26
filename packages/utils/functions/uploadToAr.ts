@@ -2,7 +2,7 @@ import axios from 'axios'
 import type { PublicationMetadataV2Input } from 'lens'
 import toast from 'react-hot-toast'
 
-import { LENSTUBE_API_URL } from '../constants'
+import { NECTARHUB_API_URL } from '../constants'
 import type { ProfileMetadata } from '../custom-types'
 import logger from '../logger'
 
@@ -11,7 +11,7 @@ const uploadToAr = async (
 ): Promise<{ url: string | null }> => {
   try {
     const response = await axios.post(
-      `${LENSTUBE_API_URL}/metadata/upload`,
+      `${NECTARHUB_API_URL}/metadata/upload`,
       data
     )
     const { url } = response.data

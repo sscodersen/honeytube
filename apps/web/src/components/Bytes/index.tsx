@@ -12,11 +12,11 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { useInView } from 'react-cool-inview'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   Analytics,
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   SCROLL_ROOT_MARGIN,
   TRACK
 } from 'utils'
@@ -27,7 +27,7 @@ const request = {
   sortCriteria: PublicationSortCriteria.CuratedProfiles,
   limit: 5,
   noRandomize: false,
-  sources: [LENSTUBE_BYTES_APP_ID],
+  sources: [NECTARHUB_BYTES_APP_ID],
   publicationTypes: [PublicationTypes.Post],
   customFilters: LENS_CUSTOM_FILTERS
 }
@@ -49,7 +49,7 @@ const Bytes = () => {
         channelId: selectedChannel?.id ?? null
       },
       onCompleted: (data) => {
-        const items = data?.explorePublications?.items as LenstubePublication[]
+        const items = data?.explorePublications?.items as NectarhubPublication[]
         const publicationId = router.query.id
         if (!publicationId) {
           const nextUrl = window.location.origin + `/bytes/${items[0]?.id}`
@@ -58,9 +58,9 @@ const Bytes = () => {
       }
     })
 
-  const bytes = data?.explorePublications?.items as LenstubePublication[]
+  const bytes = data?.explorePublications?.items as NectarhubPublication[]
   const pageInfo = data?.explorePublications?.pageInfo
-  const singleBytePublication = singleByte?.publication as LenstubePublication
+  const singleBytePublication = singleByte?.publication as NectarhubPublication
 
   const fetchSingleByte = async () => {
     const publicationId = router.query.id
@@ -122,7 +122,7 @@ const Bytes = () => {
       <MetaTags title="Bytes" />
       <div className="md:h-[calc(100vh-70px)] h-screen overflow-y-scroll no-scrollbar snap-y snap-mandatory scroll-smooth">
         {singleByte && <ByteVideo video={singleBytePublication} />}
-        {bytes?.map((video: LenstubePublication) => (
+        {bytes?.map((video: NectarhubPublication) => (
           <ByteVideo video={video} key={`${video?.id}_${video.createdAt}`} />
         ))}
         {pageInfo?.next && bytes.length !== pageInfo?.totalCount && (

@@ -20,13 +20,13 @@ import type { FC } from 'react'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
-import type { CustomErrorWithData, LenstubePublication } from 'utils'
+import type { CustomErrorWithData, NectarhubPublication } from 'utils'
 import {
   Analytics,
   ERROR_MESSAGE,
   LENSHUB_PROXY_ADDRESS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_WEBSITE_URL,
+  NECTARHUB_APP_ID,
+  NECTARHUB_WEBSITE_URL,
   RELAYER_ENABLED,
   TRACK
 } from 'utils'
@@ -42,7 +42,7 @@ import { useContractWrite, useSignTypedData } from 'wagmi'
 import { z } from 'zod'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 const formSchema = z.object({
   comment: z
@@ -218,7 +218,7 @@ const NewComment: FC<Props> = ({ video }) => {
         content: trimify(data.comment),
         locale: getUserLocale(),
         mainContentFocus: PublicationMainFocus.TextOnly,
-        external_url: `${LENSTUBE_WEBSITE_URL}/watch/${video?.id}`,
+        external_url: `${NECTARHUB_WEBSITE_URL}/watch/${video?.id}`,
         image: textNftImageUrl,
         imageMimeType: 'image/svg+xml',
         name: `${selectedChannel?.handle}'s comment on video ${video.metadata.name}`,
@@ -231,11 +231,11 @@ const NewComment: FC<Props> = ({ video }) => {
           {
             displayType: PublicationMetadataDisplayTypes.String,
             traitType: 'app',
-            value: LENSTUBE_APP_ID
+            value: NECTARHUB_APP_ID
           }
         ],
         media: [],
-        appId: LENSTUBE_APP_ID
+        appId: NECTARHUB_APP_ID
       })
       const request = {
         profileId: selectedChannel?.id,

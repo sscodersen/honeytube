@@ -15,7 +15,7 @@ import Link from 'next/link'
 import type { FC } from 'react'
 import React, { useEffect, useState } from 'react'
 import { AiFillHeart, AiOutlinePlayCircle } from 'react-icons/ai'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   checkValueInAttributes,
   getValueFromTraitType
@@ -28,7 +28,7 @@ const CommentOptions = dynamic(() => import('./CommentOptions'))
 const PublicationReaction = dynamic(() => import('./PublicationReaction'))
 
 interface Props {
-  comment: LenstubePublication
+  comment: NectarhubPublication
 }
 
 const VideoComment: FC<Props> = ({ comment }) => {

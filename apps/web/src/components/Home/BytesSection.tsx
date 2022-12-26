@@ -11,11 +11,11 @@ import {
 } from 'lens'
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   Analytics,
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   TRACK
 } from 'utils'
 import getLensHandle from 'utils/functions/getLensHandle'
@@ -35,7 +35,7 @@ const BytesSection = () => {
     sortCriteria: PublicationSortCriteria.CuratedProfiles,
     limit: 30,
     noRandomize: false,
-    sources: [LENSTUBE_BYTES_APP_ID],
+    sources: [NECTARHUB_BYTES_APP_ID],
     publicationTypes: [PublicationTypes.Post],
     customFilters: LENS_CUSTOM_FILTERS,
     metadata: {
@@ -49,7 +49,7 @@ const BytesSection = () => {
     variables: { request }
   })
 
-  const bytes = data?.explorePublications?.items as LenstubePublication[]
+  const bytes = data?.explorePublications?.items as NectarhubPublication[]
 
   const sectionOffsetWidth = sectionRef.current?.offsetWidth ?? 1000
   const scrollOffset = sectionOffsetWidth / 1.2

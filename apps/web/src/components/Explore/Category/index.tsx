@@ -13,11 +13,11 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { useInView } from 'react-cool-inview'
 import Custom404 from 'src/pages/404'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   SCROLL_ROOT_MARGIN
 } from 'utils'
 import getCategoryName from 'utils/functions/getCategoryName'
@@ -30,7 +30,7 @@ const ExploreCategory = () => {
     publicationTypes: [PublicationTypes.Post],
     limit: 32,
     sortCriteria: PublicationSortCriteria.Latest,
-    sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID],
+    sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID],
     customFilters: LENS_CUSTOM_FILTERS,
     metadata: {
       tags: { oneOf: [categoryName] },
@@ -45,7 +45,7 @@ const ExploreCategory = () => {
     skip: !query.category
   })
 
-  const videos = data?.explorePublications?.items as LenstubePublication[]
+  const videos = data?.explorePublications?.items as NectarhubPublication[]
   const pageInfo = data?.explorePublications?.pageInfo
 
   const { observe } = useInView({

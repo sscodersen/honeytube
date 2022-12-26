@@ -20,12 +20,12 @@ import type { FC } from 'react'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
-import type { CustomErrorWithData, LenstubePublication } from 'utils'
+import type { CustomErrorWithData, NectarhubPublication } from 'utils'
 import {
   Analytics,
   LENSHUB_PROXY_ADDRESS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_WEBSITE_URL,
+  NECTARHUB_APP_ID,
+  NECTARHUB_WEBSITE_URL,
   RELAYER_ENABLED,
   SIGN_IN_REQUIRED_MESSAGE,
   STATIC_ASSETS,
@@ -43,7 +43,7 @@ import { z } from 'zod'
 type Props = {
   show: boolean
   setShowTip: React.Dispatch<boolean>
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const formSchema = z.object({
@@ -216,7 +216,7 @@ const TipModal: FC<Props> = ({ show, setShowTip, video }) => {
         content: getValues('message'),
         locale: getUserLocale(),
         mainContentFocus: PublicationMainFocus.TextOnly,
-        external_url: `${LENSTUBE_WEBSITE_URL}/watch/${video?.id}`,
+        external_url: `${NECTARHUB_WEBSITE_URL}/watch/${video?.id}`,
         image: null,
         imageMimeType: null,
         name: `${selectedChannel?.handle}'s comment on video ${video.metadata.name}`,
@@ -224,7 +224,7 @@ const TipModal: FC<Props> = ({ show, setShowTip, video }) => {
           {
             displayType: PublicationMetadataDisplayTypes.String,
             traitType: 'app',
-            value: LENSTUBE_APP_ID
+            value: NECTARHUB_APP_ID
           },
           {
             displayType: PublicationMetadataDisplayTypes.String,
@@ -238,7 +238,7 @@ const TipModal: FC<Props> = ({ show, setShowTip, video }) => {
           }
         ],
         media: [],
-        appId: LENSTUBE_APP_ID
+        appId: NECTARHUB_APP_ID
       })
       const request = {
         profileId: selectedChannel?.id,

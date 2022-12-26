@@ -3,12 +3,12 @@ import SubscribeActions from '@components/Common/SubscribeActions'
 import Link from 'next/link'
 import type { FC } from 'react'
 import React from 'react'
-import type { LenstubePublication } from 'utils/custom-types'
+import type { NectarhubPublication } from 'utils/custom-types'
 import { formatNumber } from 'utils/functions/formatNumber'
 import getProfilePicture from 'utils/functions/getProfilePicture'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const BottomOverlay: FC<Props> = ({ video }) => {

@@ -191,7 +191,7 @@ const Details: FC<Props> = ({ onUpload, onCancel }) => {
             <span>
               Sorry! Something about this video has tripped some content
               warnings. It contains NSFW content in some frames, and so the
-              video is not allowed to post on Lenstube!
+              video is not allowed to post on Nectarhub!
             </span>
           }
         />

@@ -7,11 +7,11 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import type { FC } from 'react'
 import React, { useState } from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 
 dayjs.extend(relativeTime)
 
-type Props = { video: LenstubePublication }
+type Props = { video: NectarhubPublication }
 
 const VideoMeta: FC<Props> = ({ video }) => {
   const [showCollectsModal, setShowCollectsModal] = useState(false)

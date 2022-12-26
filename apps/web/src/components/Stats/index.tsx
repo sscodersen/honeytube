@@ -13,7 +13,7 @@ import {
   FcTabletAndroid,
   FcVideoCall
 } from 'react-icons/fc'
-import { ADMIN_IDS, LENSTUBE_APP_ID } from 'utils'
+import { ADMIN_IDS, NECTARHUB_APP_ID } from 'utils'
 import useIsMounted from 'utils/hooks/useIsMounted'
 
 const StatCard = dynamic(() => import('./StatCard'))
@@ -27,7 +27,7 @@ const Stats = () => {
   const { data, loading } = useGlobalProtocolStatsQuery({
     variables: {
       request: {
-        sources: [LENSTUBE_APP_ID]
+        sources: [NECTARHUB_APP_ID]
       }
     }
   })
@@ -41,7 +41,7 @@ const Stats = () => {
 
   return (
     <>
-      <MetaTags title="Lenstube Stats" />
+      <MetaTags title="Nectarhub Stats" />
       {loading && !mounted ? (
         <Loader />
       ) : (

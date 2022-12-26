@@ -8,7 +8,7 @@ import { FeedEventItemType, PublicationMainFocus, useFeedQuery } from 'lens'
 import React from 'react'
 import { useInView } from 'react-cool-inview'
 import Custom500 from 'src/pages/500'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { SCROLL_ROOT_MARGIN } from 'utils'
 
 const HomeFeed = () => {
@@ -75,7 +75,7 @@ const HomeFeed = () => {
               return (
                 <VideoCard
                   key={`${video?.id}_${video.createdAt}`}
-                  video={video as LenstubePublication}
+                  video={video as NectarhubPublication}
                 />
               )
             })}

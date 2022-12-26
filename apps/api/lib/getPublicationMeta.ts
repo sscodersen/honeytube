@@ -1,7 +1,7 @@
 import { PublicationDetailsDocument } from 'lens'
 import type { NextApiResponse } from 'next'
-import type { LenstubePublication } from 'utils'
-import { LENSTUBE_APP_DESCRIPTION, STATIC_ASSETS } from 'utils'
+import type { NectarhubPublication } from 'utils'
+import { NECTARHUB_APP_DESCRIPTION, STATIC_ASSETS } from 'utils'
 import getApolloClient from 'utils/functions/getApolloClient'
 import getMetaTags from 'utils/functions/getMetaTags'
 import getThumbnailUrl from 'utils/functions/getThumbnailUrl'
@@ -20,7 +20,7 @@ const getPublicationMeta = async (
       variables: { request: { publicationId } }
     })
 
-    const video: LenstubePublication = data?.publication
+    const video: NectarhubPublication = data?.publication
     const title = truncate(video?.metadata?.name as string, 100)
     const description = truncate(video?.metadata?.description as string, 100)
     const thumbnail = imageCdn(
@@ -43,8 +43,8 @@ const getPublicationMeta = async (
   } catch {
     return res.setHeader('Content-Type', 'text/html').send(
       getMetaTags({
-        title: 'Lenstube',
-        description: LENSTUBE_APP_DESCRIPTION,
+        title: 'Nectarhub',
+        description: NECTARHUB_APP_DESCRIPTION,
         image: `${STATIC_ASSETS}/images/seo/og.png`
       })
     )

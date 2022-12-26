@@ -3,7 +3,7 @@ import useAppStore from '@lib/store'
 import type { Attribute } from 'lens'
 import { useRouter } from 'next/router'
 import React from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { STATIC_ASSETS } from 'utils'
 import { getTimeFromSeconds } from 'utils/functions/formatTime'
 import { getValueFromTraitType } from 'utils/functions/getFromAttributes'
@@ -13,7 +13,7 @@ import {
   getPublicationMediaUrl
 } from 'utils/functions/getPublicationMediaUrl'
 
-const ThumbnailOverlays = ({ video }: { video: LenstubePublication }) => {
+const ThumbnailOverlays = ({ video }: { video: NectarhubPublication }) => {
   const selectedChannel = useAppStore((state) => state.selectedChannel)
 
   const { pathname } = useRouter()

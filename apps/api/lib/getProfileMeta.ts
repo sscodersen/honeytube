@@ -1,7 +1,7 @@
 import type { Profile } from 'lens'
 import { ProfileDocument } from 'lens'
 import type { NextApiResponse } from 'next'
-import { LENSTUBE_APP_DESCRIPTION } from 'utils'
+import { NECTARHUB_APP_DESCRIPTION } from 'utils'
 import getApolloClient from 'utils/functions/getApolloClient'
 import getMetaTags from 'utils/functions/getMetaTags'
 import getProfilePicture from 'utils/functions/getProfilePicture'
@@ -18,7 +18,7 @@ const getProfileMeta = async (res: NextApiResponse, handle: string) => {
 
     const profile: Profile = data?.profile
     const title = profile?.name ?? profile?.handle
-    const description = profile?.bio || LENSTUBE_APP_DESCRIPTION
+    const description = profile?.bio || NECTARHUB_APP_DESCRIPTION
     const image = getProfilePicture(profile, 'avatar_lg')
 
     return res
@@ -36,9 +36,9 @@ const getProfileMeta = async (res: NextApiResponse, handle: string) => {
   } catch {
     return res.setHeader('Content-Type', 'text/html').send(
       getMetaTags({
-        title: 'Lenstube',
-        description: LENSTUBE_APP_DESCRIPTION,
-        image: getRandomProfilePicture('Lenstube')
+        title: 'Nectarhub',
+        description: NECTARHUB_APP_DESCRIPTION,
+        image: getRandomProfilePicture('Nectarhub')
       })
     )
   }

@@ -2,10 +2,10 @@ import Link from 'next/link'
 import React from 'react'
 import {
   Analytics,
-  LENSTUBE_GITHUB_HANDLE,
-  LENSTUBE_ROADMAP_URL,
-  LENSTUBE_STATUS_PAGE,
-  LENSTUBE_TWITTER_HANDLE,
+  NECTARHUB_GITHUB_HANDLE,
+  NECTARHUB_ROADMAP_URL,
+  NECTARHUB_STATUS_PAGE,
+  NECTARHUB_TWITTER_HANDLE,
   TRACK
 } from 'utils'
 
@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="grid grid-cols-2 text-sm">
       <Link
         className="rounded-lg px-2.5 py-1.5 opacity-80 hover:opacity-100"
-        href={LENSTUBE_STATUS_PAGE}
+        href={NECTARHUB_STATUS_PAGE}
         onClick={() => Analytics.track(TRACK.SYSTEM.MORE_MENU.STATUS)}
         target="_blank"
       >
@@ -22,7 +22,7 @@ const Footer = () => {
       </Link>
       <Link
         className="rounded-lg px-2.5 py-1.5 opacity-80 hover:opacity-100"
-        href={`https://github.com/${LENSTUBE_GITHUB_HANDLE}`}
+        href={`https://github.com/${NECTARHUB_GITHUB_HANDLE}`}
         onClick={() => Analytics.track(TRACK.SYSTEM.MORE_MENU.GITHUB)}
         target="_blank"
       >
@@ -30,7 +30,7 @@ const Footer = () => {
       </Link>
       <Link
         className="rounded-lg px-2.5 py-1.5 opacity-80 hover:opacity-100"
-        href={`https://twitter.com/${LENSTUBE_TWITTER_HANDLE}`}
+        href={`https://twitter.com/${NECTARHUB_TWITTER_HANDLE}`}
         onClick={() => Analytics.track(TRACK.SYSTEM.MORE_MENU.TWITTER)}
         target="_blank"
       >
@@ -52,7 +52,7 @@ const Footer = () => {
       </Link>
       <Link
         className="rounded-lg px-2.5 py-1.5 opacity-80 hover:opacity-100"
-        href={LENSTUBE_ROADMAP_URL}
+        href={NECTARHUB_ROADMAP_URL}
         target="_blank"
       >
         Feedback

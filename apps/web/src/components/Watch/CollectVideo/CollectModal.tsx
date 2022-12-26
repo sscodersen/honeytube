@@ -14,7 +14,7 @@ import {
 import Link from 'next/link'
 import type { Dispatch, FC } from 'react'
 import React, { useEffect, useState } from 'react'
-import type { LenstubeCollectModule, LenstubePublication } from 'utils'
+import type { NectarhubCollectModule, NectarhubPublication } from 'utils'
 import { Analytics, LENSPORT_MARKETPLACE_URL, TRACK } from 'utils'
 import { formatNumber } from 'utils/functions/formatNumber'
 import { shortenAddress } from 'utils/functions/shortenAddress'
@@ -26,10 +26,10 @@ import PermissionAlert from './PermissionAlert'
 type Props = {
   showModal: boolean
   setShowModal: Dispatch<boolean>
-  video: LenstubePublication
+  video: NectarhubPublication
   collecting: boolean
   fetchingCollectModule: boolean
-  collectModule: LenstubeCollectModule
+  collectModule: NectarhubCollectModule
   collectNow: () => void
 }
 

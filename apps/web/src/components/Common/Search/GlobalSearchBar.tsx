@@ -10,12 +10,12 @@ import {
 } from 'lens'
 import type { FC } from 'react'
 import React, { useEffect, useRef, useState } from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   Analytics,
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   TRACK
 } from 'utils'
 import useDebounce from 'utils/hooks/useDebounce'
@@ -50,7 +50,7 @@ const GlobalSearchBar: FC<Props> = ({ onSearchResults }) => {
             type: activeSearch,
             query: keyword,
             limit: 30,
-            sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID],
+            sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID],
             customFilters: LENS_CUSTOM_FILTERS
           }
         }
@@ -144,7 +144,7 @@ const GlobalSearchBar: FC<Props> = ({ onSearchResults }) => {
                 <Tab.Panel className="overflow-y-auto max-h-[80vh] no-scrollbar focus:outline-none">
                   {data?.search?.__typename === 'PublicationSearchResult' && (
                     <Videos
-                      results={channels as LenstubePublication[]}
+                      results={channels as NectarhubPublication[]}
                       loading={loading}
                       clearSearch={clearSearch}
                     />

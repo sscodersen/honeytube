@@ -11,11 +11,11 @@ import {
 } from 'lens'
 import React, { useEffect } from 'react'
 import { useInView } from 'react-cool-inview'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   Analytics,
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
+  NECTARHUB_APP_ID,
   SCROLL_ROOT_MARGIN,
   TRACK
 } from 'utils'
@@ -31,7 +31,7 @@ const Curated = () => {
     sortCriteria: PublicationSortCriteria.CuratedProfiles,
     limit: 32,
     noRandomize: false,
-    sources: [LENSTUBE_APP_ID],
+    sources: [NECTARHUB_APP_ID],
     publicationTypes: [PublicationTypes.Post],
     customFilters: LENS_CUSTOM_FILTERS,
     metadata: {
@@ -46,7 +46,7 @@ const Curated = () => {
   })
 
   const pageInfo = data?.explorePublications?.pageInfo
-  const videos = data?.explorePublications?.items as LenstubePublication[]
+  const videos = data?.explorePublications?.items as NectarhubPublication[]
 
   const { observe } = useInView({
     rootMargin: SCROLL_ROOT_MARGIN,

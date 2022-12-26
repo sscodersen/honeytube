@@ -1,7 +1,7 @@
 import Alert from '@components/Common/Alert'
 import Link from 'next/link'
 import React from 'react'
-import type { LenstubeCollectModule } from 'utils'
+import type { NectarhubCollectModule } from 'utils'
 import { IS_MAINNET } from 'utils'
 
 const getUniswapURL = (amount: number, outputCurrency: string): string => {
@@ -13,7 +13,7 @@ const getUniswapURL = (amount: number, outputCurrency: string): string => {
 const BalanceAlert = ({
   collectModule
 }: {
-  collectModule: LenstubeCollectModule
+  collectModule: NectarhubCollectModule
 }) => {
   return (
     <div className="flex-1">

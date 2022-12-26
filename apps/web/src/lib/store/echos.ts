@@ -1,9 +1,9 @@
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import create from 'zustand'
 
 interface EchoState {
-  selectedTrack: LenstubePublication | null
-  setSelectedTrack: (publication: LenstubePublication | null) => void
+  selectedTrack: NectarhubPublication | null
+  setSelectedTrack: (publication: NectarhubPublication | null) => void
 }
 
 export const useEchoStore = create<EchoState>((set) => ({

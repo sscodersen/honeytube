@@ -3,7 +3,7 @@ import { ControlsContainer } from '@livepeer/react'
 import type { FC } from 'react'
 import React, { useState } from 'react'
 import { useInView } from 'react-cool-inview'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { getIsSensitiveContent } from 'utils/functions/getIsSensitiveContent'
 import { getPublicationMediaUrl } from 'utils/functions/getPublicationMediaUrl'
 import getThumbnailUrl from 'utils/functions/getThumbnailUrl'
@@ -16,7 +16,7 @@ import ByteActions from './ByteActions'
 import TopOverlay from './TopOverlay'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const ByteVideo: FC<Props> = ({ video }) => {

@@ -1,14 +1,14 @@
 import Video from '@components/Video'
 import { PublicationDetailsDocument } from 'lens'
 import type { GetServerSideProps } from 'next'
-import type { LenstubePublication } from 'utils'
-import { LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID } from 'utils'
+import type { NectarhubPublication } from 'utils'
+import { NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID } from 'utils'
 import getApolloClient from 'utils/functions/getApolloClient'
 
 export default Video
 
 interface Props {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const apolloClient = getApolloClient()
@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
     query: PublicationDetailsDocument,
     variables: {
       request: { publicationId: pubId },
-      sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID]
+      sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID]
     }
   })
   if (!data.publication || error) {

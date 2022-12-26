@@ -1,20 +1,20 @@
 import { CustomFiltersTypes } from 'lens'
 
-export const LENSTUBE_APP_NAME = 'Lenstube'
-export const LENSTUBE_APP_DESCRIPTION =
-  'Lenstube is a decentralized video-sharing social media platform built with Lens protocol.'
+export const NECTARHUB_APP_NAME = 'Nectarhub'
+export const NECTARHUB_APP_DESCRIPTION =
+  'Nectarhub is a decentralized video-sharing social media platform built with Lens protocol.'
 
 export const LENS_ENV = process.env.NEXT_PUBLIC_ENVIRONMENT
 export const IS_MAINNET = LENS_ENV === 'mainnet'
 export const RELAYER_ENABLED = true
 
-export const STATIC_ASSETS = 'https://assets.lenstube.xyz'
-export const LENSTUBE_WEBSITE_URL = IS_MAINNET
-  ? 'https://lenstube.xyz'
-  : 'https://testnet.lenstube.xyz'
-export const LENSTUBE_EMBED_URL = IS_MAINNET
-  ? 'https://embed.lenstube.xyz'
-  : 'https://test-embed.lenstube.xyz'
+export const STATIC_ASSETS = 'https://assets.nectarhub.xyz'
+export const NECTARHUB_WEBSITE_URL = IS_MAINNET
+  ? 'https://nectarhub.xyz'
+  : 'https://testnet.nectarhub.xyz'
+export const NECTARHUB_EMBED_URL = IS_MAINNET
+  ? 'https://embed.nectarhub.xyz'
+  : 'https://test-embed.nectarhub.xyz'
 export const FALLBACK_COVER_URL = `${STATIC_ASSETS}/images/fallbackThumbnail.png`
 
 // lens
@@ -28,24 +28,24 @@ export const STAGING_API_URL = IS_MAINNET
   ? STAGING_MAINNET_API_URL
   : STAGING_TESTNET_API_URL
 
-// lenstube api
-export const LENSTUBE_MAINNET_API_URL = 'https://api.lenstube.xyz'
-export const LENSTUBE_TESTNET_API_URL = 'https://api-testnet.lenstube.xyz'
-export const LENSTUBE_DEV_API_URL = 'http://localhost:5555'
-export const LENSTUBE_API_URL = IS_MAINNET
-  ? 'https://api.lenstube.xyz'
-  : 'https://api-testnet.lenstube.xyz'
+// nectarhub api
+export const NECTARHUB_MAINNET_API_URL = 'https://api.nectarhub.xyz'
+export const NECTARHUB_TESTNET_API_URL = 'https://api-testnet.nectarhub.xyz'
+export const NECTARHUB_DEV_API_URL = 'http://localhost:5555'
+export const NECTARHUB_API_URL = IS_MAINNET
+  ? 'https://api.nectarhub.xyz'
+  : 'https://api-testnet.nectarhub.xyz'
 
 export const API_URL = IS_MAINNET ? MAINNET_API_URL : TESTNET_API_URL
 export const LENSHUB_PROXY_ADDRESS = IS_MAINNET
-  ? '0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d'
-  : '0x60Ae865ee4C725cd04353b5AAb364553f56ceF82'
+  ? '0x1A1FEe7EeD918BD762173e4dc5EfDB8a78C924A8'
+  : '0x1A1FEe7EeD918BD762173e4dc5EfDB8a78C924A8'
 export const LENS_PERIPHERY_ADDRESS = IS_MAINNET
-  ? '0xeff187b4190E551FC25a7fA4dFC6cf7fDeF7194f'
-  : '0xD5037d72877808cdE7F669563e9389930AF404E8'
+  ? '0x500D1d6A4c7D8Ae28240b47c8FCde034D827fD5e'
+  : '0x500D1d6A4c7D8Ae28240b47c8FCde034D827fD5e'
 export const WMATIC_TOKEN_ADDRESS = IS_MAINNET
-  ? '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270'
-  : '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889'
+  ? '0xc4905364b78a742ccce7B890A89514061E47068D'
+  : '0xc4905364b78a742ccce7B890A89514061E47068D'
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
 // polygon
@@ -59,19 +59,19 @@ export const POLYGONSCAN_URL = IS_MAINNET
 export const POLYGON_CHAIN_ID = IS_MAINNET ? 137 : 80001
 
 // cdn
-export const IMAGE_CDN_URL = IS_MAINNET ? 'https://img.lenstube.xyz' : ''
+export const IMAGE_CDN_URL = IS_MAINNET ? 'https://img.nectarhub.xyz' : ''
 export const VIDEO_CDN_URL = 'https://cdn.livepeer.com'
 
 export const SCROLL_ROOT_MARGIN = '40% 0px'
 
 // ipfs
 export const IPFS_FREE_UPLOAD_LIMIT = IS_MAINNET ? 1000 : 100
-export const IPFS_GATEWAY = 'https://ipfs.lenstube.xyz/ipfs'
+export const IPFS_GATEWAY = 'https://ipfs.nectarhub.xyz/ipfs'
 export const EVER_ENDPOINT = 'https://endpoint.4everland.co'
 export const EVER_REGION = 'us-west-2'
 export const EVER_ACCESS_KEY = process.env.EVER_ACCESS_KEY as string
 export const EVER_ACCESS_SECRET = process.env.EVER_ACCESS_SECRET as string
-export const NEXT_PUBLIC_EVER_BUCKET_NAME = IS_MAINNET ? 'lenstube' : 'testnet'
+export const NEXT_PUBLIC_EVER_BUCKET_NAME = IS_MAINNET ? 'nectarhub' : 'testnet'
 
 // livepeer
 export const LIVEPEER_STUDIO_API_KEY = process.env
@@ -95,15 +95,15 @@ export const ERROR_MESSAGE = 'Oops, something went wrong!'
 export const SIGN_IN_REQUIRED_MESSAGE = 'Sign in required'
 
 // App Ids
-export const LENSTUBE_APP_ID = 'lenstube'
-export const LENSTUBE_BYTES_APP_ID = 'lenstube-bytes'
+export const NECTARHUB_APP_ID = 'nectarhub'
+export const NECTARHUB_BYTES_APP_ID = 'nectarhub-bytes'
 
 // official
-export const LENSTUBE_TWITTER_HANDLE = 'lenstubexyz'
-export const LENSTUBE_GITHUB_HANDLE = 'lenstube-xyz'
-export const LENSTUBE_STATUS_PAGE = 'https://status.lenstube.xyz'
+export const NECTARHUB_TWITTER_HANDLE = 'nectarhubxyz'
+export const NECTARHUB_GITHUB_HANDLE = 'nectarhub-xyz'
+export const NECTARHUB_STATUS_PAGE = 'https://status.nectarhub.xyz'
 export const TALLY_VERIFICATION_FORM_URL = 'https://tally.so/r/mY5e80'
-export const LENSTUBE_ROADMAP_URL = 'https://roadmap.lenstube.xyz'
+export const NECTARHUB_ROADMAP_URL = 'https://roadmap.nectarhub.xyz'
 
 // admin
 export const ADMIN_IDS = IS_MAINNET ? ['0x2d'] : ['0x2f']
@@ -140,7 +140,7 @@ export const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN
 export const DATADOG_KEY = process.env.NEXT_PUBLIC_DATADOG_KEY
 
 export const API_ORIGINS = [
-  'https://lenstube.xyz',
-  'https://testnet.lenstube.xyz',
+  'https://nectarhub.xyz',
+  'https://testnet.nectarhub.xyz',
   'http://localhost:4783'
 ]

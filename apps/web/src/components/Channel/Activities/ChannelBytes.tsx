@@ -7,10 +7,10 @@ import { PublicationTypes, useProfilePostsQuery } from 'lens'
 import type { FC } from 'react'
 import React from 'react'
 import { useInView } from 'react-cool-inview'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   SCROLL_ROOT_MARGIN
 } from 'utils'
 
@@ -22,7 +22,7 @@ const ChannelBytes: FC<Props> = ({ channel }) => {
   const request = {
     publicationTypes: [PublicationTypes.Post],
     limit: 32,
-    sources: [LENSTUBE_BYTES_APP_ID],
+    sources: [NECTARHUB_BYTES_APP_ID],
     customFilters: LENS_CUSTOM_FILTERS,
     profileId: channel?.id
   }
@@ -32,7 +32,7 @@ const ChannelBytes: FC<Props> = ({ channel }) => {
     skip: !channel?.id
   })
 
-  const bytes = data?.publications?.items as LenstubePublication[]
+  const bytes = data?.publications?.items as NectarhubPublication[]
   const pageInfo = data?.publications?.pageInfo
 
   const { observe } = useInView({

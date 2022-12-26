@@ -3,11 +3,11 @@ import { useRouter } from 'next/router'
 import type { FC } from 'react'
 import React from 'react'
 import {
-  LENSTUBE_API_URL,
-  LENSTUBE_APP_DESCRIPTION,
-  LENSTUBE_APP_NAME,
-  LENSTUBE_EMBED_URL,
-  LENSTUBE_TWITTER_HANDLE,
+  NECTARHUB_API_URL,
+  NECTARHUB_APP_DESCRIPTION,
+  NECTARHUB_APP_NAME,
+  NECTARHUB_EMBED_URL,
+  NECTARHUB_TWITTER_HANDLE,
   STATIC_ASSETS
 } from 'utils'
 
@@ -22,8 +22,8 @@ const MetaTags: FC<Props> = (props) => {
   const router = useRouter()
 
   const meta = {
-    title: title ?? LENSTUBE_APP_NAME,
-    description: description ?? LENSTUBE_APP_DESCRIPTION,
+    title: title ?? NECTARHUB_APP_NAME,
+    description: description ?? NECTARHUB_APP_DESCRIPTION,
     image: image ?? `${STATIC_ASSETS}/images/seo/og.png`,
     type: 'website'
   }
@@ -37,13 +37,13 @@ const MetaTags: FC<Props> = (props) => {
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=5"
       />
-      <link rel="canonical" href={`https://lenstube.xyz${router.asPath}`} />
+      <link rel="canonical" href={`https://nectarhub.xyz${router.asPath}`} />
       <meta
         property="og:url"
-        content={`https://lenstube.xyz${router.asPath}`}
+        content={`https://nectarhub.xyz${router.asPath}`}
       />
       <meta property="og:type" content={meta.type} />
-      <meta property="og:site_name" content="Lenstube" />
+      <meta property="og:site_name" content="Nectarhub" />
       <meta property="og:description" content={meta.description} />
       <meta property="og:title" content={meta.title} />
       <meta property="og:image" content={meta.image} />
@@ -52,37 +52,37 @@ const MetaTags: FC<Props> = (props) => {
       <meta name="twitter:card" content="summary" />
       <meta property="twitter:image:width" content="400" />
       <meta property="twitter:image:height" content="400" />
-      <meta name="twitter:site" content="Lenstube" />
+      <meta name="twitter:site" content="Nectarhub" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta property="twitter:image:src" content={meta.image} />
-      <meta property="twitter:creator" content={LENSTUBE_TWITTER_HANDLE} />
+      <meta property="twitter:creator" content={NECTARHUB_TWITTER_HANDLE} />
       {router.pathname === '/watch/[id]' && router.query?.id && (
         <>
           <link
             rel="iframely player"
             type="text/html"
-            href={`${LENSTUBE_EMBED_URL}/${router.query?.id}`}
+            href={`${NECTARHUB_EMBED_URL}/${router.query?.id}`}
             media="(aspect-ratio: 1280/720)"
           />
           <link
             rel="alternate"
             type="text/xml+oembed"
-            href={`${LENSTUBE_API_URL}/oembed?format=xml&id=${router.query?.id}`}
+            href={`${NECTARHUB_API_URL}/oembed?format=xml&id=${router.query?.id}`}
             title={title}
           />
           <link
             rel="alternate"
             type="application/json+oembed"
-            href={`${LENSTUBE_API_URL}/oembed?format=json&id=${router.query?.id}`}
+            href={`${NECTARHUB_API_URL}/oembed?format=json&id=${router.query?.id}`}
             title={title}
           />
         </>
       )}
-      <link rel="preconnect" href="https://img.lenstube.xyz" />
-      <link rel="dns-prefetch" href="https://img.lenstube.xyz" />
-      <link rel="preconnect" href="https://assets.lenstube.xyz" />
-      <link rel="dns-prefetch" href="https://assets.lenstube.xyz" />
+      <link rel="preconnect" href="https://img.nectarhub.xyz" />
+      <link rel="dns-prefetch" href="https://img.nectarhub.xyz" />
+      <link rel="preconnect" href="https://assets.nectarhub.xyz" />
+      <link rel="dns-prefetch" href="https://assets.nectarhub.xyz" />
     </Head>
   )
 }

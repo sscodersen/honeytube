@@ -12,12 +12,12 @@ import {
 import type { FC } from 'react'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, SIGN_IN_REQUIRED_MESSAGE, TRACK } from 'utils'
 import { formatNumber } from 'utils/functions/formatNumber'
 
 type Props = {
-  publication: LenstubePublication
+  publication: NectarhubPublication
   iconSize?: 'sm' | 'lg'
   textSize?: 'sm' | 'lg'
   isVertical?: boolean

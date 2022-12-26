@@ -3,7 +3,7 @@ import MetaTags from '@components/Common/MetaTags'
 import usePersistStore from '@lib/store/persist'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
-import { LENSTUBE_APP_NAME, STATIC_ASSETS } from 'utils'
+import { NECTARHUB_APP_NAME, STATIC_ASSETS } from 'utils'
 
 const AuthRequiredPage = () => {
   const selectedChannelId = usePersistStore((state) => state.selectedChannelId)
@@ -20,8 +20,8 @@ const AuthRequiredPage = () => {
       <MetaTags title="Login" />
       <div className="flex flex-col items-center justify-start h-full mt-10 md:mt-20">
         <img
-          src={`${STATIC_ASSETS}/images/brand/lenstube.svg`}
-          alt={LENSTUBE_APP_NAME}
+          src={`${STATIC_ASSETS}/images/brand/nectarhub.svg`}
+          alt={NECTARHUB_APP_NAME}
           draggable={false}
           height={50}
           width={50}

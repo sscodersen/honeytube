@@ -6,14 +6,14 @@ import TokenExplorerLink from '@components/Common/Links/TokenExplorerLink'
 import Link from 'next/link'
 import type { FC } from 'react'
 import React from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, TRACK } from 'utils'
 import getCategoryName from 'utils/functions/getCategoryName'
 import getMetadataHash from 'utils/functions/getMetadataHash'
 import { getIsIPFSUrl } from 'utils/functions/getPublicationMediaUrl'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const MetaInfo: FC<Props> = ({ video }) => {

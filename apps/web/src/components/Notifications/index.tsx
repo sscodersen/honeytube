@@ -18,8 +18,8 @@ import { useInView } from 'react-cool-inview'
 import {
   Analytics,
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   SCROLL_ROOT_MARGIN,
   TRACK
 } from 'utils'
@@ -70,7 +70,7 @@ const Notifications = () => {
 
   const request = {
     limit: 30,
-    sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID],
+    sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID],
     customFilters: LENS_CUSTOM_FILTERS,
     profileId: selectedChannel?.id,
     notificationTypes: getNotificationFilters()

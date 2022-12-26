@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { useHidePublicationMutation } from 'lens'
 import React from 'react'
 import toast from 'react-hot-toast'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, SIGN_IN_REQUIRED_MESSAGE, TRACK } from 'utils'
 import { getPublicationMediaUrl } from 'utils/functions/getPublicationMediaUrl'
 
@@ -22,7 +22,7 @@ const VideoOptions = ({
   setShowReport,
   showOnHover = true
 }: {
-  video: LenstubePublication
+  video: NectarhubPublication
   setShowShare: React.Dispatch<boolean>
   setShowReport: React.Dispatch<boolean>
   showOnHover?: boolean

@@ -16,13 +16,13 @@ import {
 } from 'lens'
 import React, { useState } from 'react'
 import { useInView } from 'react-cool-inview'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   ADMIN_IDS,
   Analytics,
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   SCROLL_ROOT_MARGIN,
   TRACK
 } from 'utils'
@@ -61,7 +61,7 @@ const ExploreFeed = () => {
     sortCriteria: getCriteria(),
     limit: 32,
     noRandomize: true,
-    sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID],
+    sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID],
     publicationTypes: [PublicationTypes.Post],
     customFilters: LENS_CUSTOM_FILTERS,
     metadata: {
@@ -77,7 +77,7 @@ const ExploreFeed = () => {
     }
   })
 
-  const videos = data?.explorePublications?.items as LenstubePublication[]
+  const videos = data?.explorePublications?.items as NectarhubPublication[]
   const pageInfo = data?.explorePublications?.pageInfo
 
   const { observe } = useInView({

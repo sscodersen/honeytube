@@ -11,11 +11,11 @@ const moduleExports = withTM({
     return [
       {
         source: '/sitemap.xml',
-        destination: 'https://assets.lenstube.xyz/sitemaps/sitemap.xml'
+        destination: 'https://assets.nectarhub.xyz/sitemaps/sitemap.xml'
       },
       {
         source: '/sitemaps/:match*',
-        destination: 'https://assets.lenstube.xyz/sitemaps/:match*'
+        destination: 'https://assets.nectarhub.xyz/sitemaps/:match*'
       },
       {
         source: '/collect/:match*',
@@ -27,24 +27,24 @@ const moduleExports = withTM({
     return [
       {
         source: '/discord',
-        destination: 'https://discord.com/servers/lenstube-980882088783913010',
+        destination: 'https://discord.com/servers/nectarhub-980882088783913010',
         permanent: true
       },
       {
         source: '/donate',
-        destination: 'https://gitcoin.co/grants/6972/lenstube',
+        destination: 'https://gitcoin.co/grants/6972/nectarhub',
         permanent: true
       },
       {
         source: '/terms',
         destination:
-          'https://sasicodes.notion.site/Lenstube-Terms-Conditions-8408e6e485a0437d91c4d077695b8eed',
+          'https://sasicodes.notion.site/Nectarhub-Terms-Conditions-8408e6e485a0437d91c4d077695b8eed',
         permanent: true
       },
       {
         source: '/privacy',
         destination:
-          'https://sasicodes.notion.site/Lenstube-Privacy-Policy-eb69ee55983a427da5bba44b19da0ded',
+          'https://sasicodes.notion.site/Nectarhub-Privacy-Policy-eb69ee55983a427da5bba44b19da0ded',
         permanent: true
       }
     ]

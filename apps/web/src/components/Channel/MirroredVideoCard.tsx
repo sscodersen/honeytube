@@ -6,7 +6,7 @@ import type { Attribute } from 'lens'
 import Link from 'next/link'
 import type { FC } from 'react'
 import React from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, STATIC_ASSETS, TRACK } from 'utils'
 import { getTimeFromSeconds } from 'utils/functions/formatTime'
 import { getValueFromTraitType } from 'utils/functions/getFromAttributes'
@@ -19,11 +19,11 @@ import imageCdn from 'utils/functions/imageCdn'
 dayjs.extend(relativeTime)
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const MirroredVideoCard: FC<Props> = ({ video }) => {
-  const mirrorOf = video.mirrorOf as LenstubePublication
+  const mirrorOf = video.mirrorOf as NectarhubPublication
   const isSensitiveContent = getIsSensitiveContent(mirrorOf.metadata, video.id)
   const videoDuration = getValueFromTraitType(
     mirrorOf.metadata?.attributes as Attribute[],

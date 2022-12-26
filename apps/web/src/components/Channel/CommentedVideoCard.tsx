@@ -7,7 +7,7 @@ import type { Attribute } from 'lens'
 import Link from 'next/link'
 import type { FC } from 'react'
 import React from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, STATIC_ASSETS, TRACK } from 'utils'
 import { getTimeFromSeconds } from 'utils/functions/formatTime'
 import { getValueFromTraitType } from 'utils/functions/getFromAttributes'
@@ -20,11 +20,11 @@ import imageCdn from 'utils/functions/imageCdn'
 dayjs.extend(relativeTime)
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const CommentedVideoCard: FC<Props> = ({ video }) => {
-  const commentedOn = video.commentOn as LenstubePublication
+  const commentedOn = video.commentOn as NectarhubPublication
   const isSensitiveContent = getIsSensitiveContent(
     commentedOn.metadata,
     video.id

@@ -32,7 +32,7 @@ export const usePersistStore = create(
       setSelectedChannelId: (id) => set(() => ({ selectedChannelId: id }))
     }),
     {
-      name: 'lenstube.store'
+      name: 'nectarhub.store'
     }
   )
 )

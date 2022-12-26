@@ -10,7 +10,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import type { FC } from 'react'
 import React, { useEffect, useState } from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { formatNumber } from 'utils/functions/formatNumber'
 import getProfilePicture from 'utils/functions/getProfilePicture'
 
@@ -18,7 +18,7 @@ import CollectVideo from './CollectVideo'
 import MetaInfo from './MetaInfo'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const AboutChannel: FC<Props> = ({ video }) => {

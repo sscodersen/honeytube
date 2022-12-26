@@ -56,10 +56,10 @@ const Sidebar = () => {
               className="flex items-center pt-1 focus:outline-none"
             >
               <img
-                src={`${STATIC_ASSETS}/images/brand/lenstube.svg`}
+                src={`${STATIC_ASSETS}/images/brand/nectarhub.svg`}
                 draggable={false}
                 className="w-6 h-6 ml-0.5"
-                alt="lenstube"
+                alt="nectarhub"
               />
             </Link>
           </div>
@@ -151,7 +151,7 @@ const Sidebar = () => {
               </Link>
             </Tooltip>
             {getIsFeatureEnabled(
-              FEATURE_FLAGS.LENSTUBE_ECHOS,
+              FEATURE_FLAGS.NECTARHUB_ECHOS,
               selectedChannel?.id
             ) && (
               <Tooltip

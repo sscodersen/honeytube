@@ -18,7 +18,7 @@ import {
 import { ThemeProvider, useTheme } from 'next-themes'
 import type { ReactNode } from 'react'
 import React from 'react'
-import { IS_MAINNET, LENSTUBE_APP_NAME, POLYGON_RPC_URL } from 'utils'
+import { IS_MAINNET, NECTARHUB_APP_NAME, POLYGON_RPC_URL } from 'utils'
 import { getLivepeerClient, videoPlayerTheme } from 'utils/functions/livepeer'
 import { configureChains, createClient, WagmiConfig } from 'wagmi'
 import { polygon, polygonMumbai } from 'wagmi/chains'
@@ -47,7 +47,7 @@ const connectors = connectorsForWallets([
       injectedWallet({ chains, shimDisconnect: true }),
       metaMaskWallet({ chains, shimDisconnect: true }),
       rainbowWallet({ chains }),
-      coinbaseWallet({ appName: LENSTUBE_APP_NAME, chains }),
+      coinbaseWallet({ appName: NECTARHUB_APP_NAME, chains }),
       walletConnectWallet({ chains })
     ]
   }

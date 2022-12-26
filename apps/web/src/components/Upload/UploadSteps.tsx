@@ -28,10 +28,10 @@ import {
   BUNDLR_CONNECT_MESSAGE,
   ERROR_MESSAGE,
   LENSHUB_PROXY_ADDRESS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_APP_NAME,
-  LENSTUBE_BYTES_APP_ID,
-  LENSTUBE_WEBSITE_URL,
+  NECTARHUB_APP_ID,
+  NECTARHUB_APP_NAME,
+  NECTARHUB_BYTES_APP_ID,
+  NECTARHUB_WEBSITE_URL,
   RELAYER_ENABLED,
   TRACK
 } from 'utils'
@@ -240,7 +240,7 @@ const UploadSteps = () => {
         {
           displayType: PublicationMetadataDisplayTypes.String,
           traitType: 'app',
-          value: LENSTUBE_APP_ID
+          value: NECTARHUB_APP_ID
         }
       ]
       if (uploadedVideo.durationInSeconds) {
@@ -261,14 +261,14 @@ const UploadSteps = () => {
         locale: getUserLocale(),
         tags: [uploadedVideo.videoCategory.tag],
         mainContentFocus: PublicationMainFocus.Video,
-        external_url: `${LENSTUBE_WEBSITE_URL}/${selectedChannel?.handle}`,
+        external_url: `${NECTARHUB_WEBSITE_URL}/${selectedChannel?.handle}`,
         animation_url: uploadedVideo.videoSource,
         image: uploadedVideo.thumbnail,
         imageMimeType: uploadedVideo.thumbnailType,
         name: trimify(uploadedVideo.title),
         attributes,
         media,
-        appId: isByteVideo ? LENSTUBE_BYTES_APP_ID : LENSTUBE_APP_ID
+        appId: isByteVideo ? NECTARHUB_BYTES_APP_ID : NECTARHUB_APP_ID
       }
       if (uploadedVideo.isSensitiveContent) {
         metadata.contentWarning = PublicationContentWarning.Sensitive
@@ -362,7 +362,7 @@ const UploadSteps = () => {
       const bundlr = bundlrData.instance
       const tags = [
         { name: 'Content-Type', value: uploadedVideo.videoType || 'video/mp4' },
-        { name: 'App-Name', value: LENSTUBE_APP_NAME }
+        { name: 'App-Name', value: NECTARHUB_APP_NAME }
       ]
       const uploader = bundlr.uploader.chunkedUploader
       uploader.setChunkSize(10000000) // 10 MB

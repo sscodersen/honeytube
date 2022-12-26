@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import type { FC } from 'react'
 import React from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { formatNumber } from 'utils/functions/formatNumber'
 
 import LikeOutline from '../Icons/LikeOutline'
 
 interface Props {
-  results: LenstubePublication[]
+  results: NectarhubPublication[]
   loading: boolean
   clearSearch: () => void
 }

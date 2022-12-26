@@ -1,10 +1,10 @@
 import {
-  LENSTUBE_API_URL,
-  LENSTUBE_APP_DESCRIPTION,
-  LENSTUBE_APP_NAME,
-  LENSTUBE_EMBED_URL,
-  LENSTUBE_TWITTER_HANDLE,
-  LENSTUBE_WEBSITE_URL,
+  NECTARHUB_API_URL,
+  NECTARHUB_APP_DESCRIPTION,
+  NECTARHUB_APP_NAME,
+  NECTARHUB_EMBED_URL,
+  NECTARHUB_TWITTER_HANDLE,
+  NECTARHUB_WEBSITE_URL,
   STATIC_ASSETS
 } from 'utils'
 
@@ -27,12 +27,12 @@ const getMetaTags = ({
 }: Args) => {
   const isVideo = page === 'VIDEO'
   const meta = {
-    title: `${title} • Lenstube` ?? LENSTUBE_APP_NAME,
-    description: description || LENSTUBE_APP_DESCRIPTION,
+    title: `${title} • Nectarhub` ?? NECTARHUB_APP_NAME,
+    description: description || NECTARHUB_APP_DESCRIPTION,
     image: image ?? `${STATIC_ASSETS}/images/seo/og.png`,
     url: isVideo
-      ? `${LENSTUBE_WEBSITE_URL}/watch/${pubId}`
-      : `${LENSTUBE_WEBSITE_URL}/channel/${handle}`
+      ? `${NECTARHUB_WEBSITE_URL}/watch/${pubId}`
+      : `${NECTARHUB_WEBSITE_URL}/channel/${handle}`
   }
 
   let defaultMeta = `<title>${meta.title}</title>
@@ -42,7 +42,7 @@ const getMetaTags = ({
               <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
               <link rel="canonical" href="${meta.url}" />
               <meta property="og:url" content="${meta.url}" />
-              <meta property="og:site_name" content="${LENSTUBE_APP_NAME}" />
+              <meta property="og:site_name" content="${NECTARHUB_APP_NAME}" />
               <meta property="og:description" content="${meta.description}" />
               <meta property="og:title" content="${meta.title}" />
               <meta property="og:image" content="${meta.image}" />
@@ -58,17 +58,17 @@ const getMetaTags = ({
               <meta property="twitter:image:height" content="${
                 isVideo ? 360 : 400
               }" />
-              <meta name="twitter:site" content="@${LENSTUBE_TWITTER_HANDLE}" />
+              <meta name="twitter:site" content="@${NECTARHUB_TWITTER_HANDLE}" />
               <meta name="twitter:title" content="${meta.title}" />
               <meta name="twitter:description" content="${meta.description}" />
               <meta property="twitter:image" content="${meta.image}" />
-              <meta property="twitter:creator" content="${LENSTUBE_TWITTER_HANDLE}" />
+              <meta property="twitter:creator" content="${NECTARHUB_TWITTER_HANDLE}" />
               <meta name="twitter:card" content="${
                 isVideo ? 'player' : 'summary'
               }" />`
 
   if (isVideo) {
-    const embedUrl = `${LENSTUBE_EMBED_URL}/${pubId}`
+    const embedUrl = `${NECTARHUB_EMBED_URL}/${pubId}`
     defaultMeta += `<meta property="og:video" content="${embedUrl}" />
       <meta property="og:video:width" content="1280" />
       <meta property="og:video:height" content="720" />
@@ -81,8 +81,8 @@ const getMetaTags = ({
       <meta property="twitter:player:width" content="1280" />
       <meta property="twitter:player:height" content="720" />
       <link rel="iframely player" type="text/html" href="${embedUrl}" media="(aspect-ratio: 1280/720)" />
-      <link rel="alternate" type="text/xml+oembed" href="${LENSTUBE_API_URL}/oembed?format=xml&id=${pubId}" title="${title}" />
-      <link rel="alternate" type="application/json+oembed" href="${LENSTUBE_API_URL}/oembed?format=json&id=${pubId}" title="${title}" />
+      <link rel="alternate" type="text/xml+oembed" href="${NECTARHUB_API_URL}/oembed?format=xml&id=${pubId}" title="${title}" />
+      <link rel="alternate" type="application/json+oembed" href="${NECTARHUB_API_URL}/oembed?format=json&id=${pubId}" title="${title}" />
 
       <meta property="og:video:url" content="${meta.url}" />
       <meta property="og:video:secure_url" content="${meta.url}" />

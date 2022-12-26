@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import Custom404 from 'src/pages/404'
 import Custom500 from 'src/pages/500'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, TRACK } from 'utils'
 
 import AboutChannel from './AboutChannel'
@@ -36,7 +36,7 @@ const VideoDetails = () => {
     skip: !id
   })
 
-  const video = data?.publication as LenstubePublication
+  const video = data?.publication as NectarhubPublication
   const publicationType = video?.__typename
 
   const canWatch =

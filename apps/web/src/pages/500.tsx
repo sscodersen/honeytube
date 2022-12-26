@@ -12,8 +12,8 @@ export default function Custom500() {
       </Head>
       <div className="flex flex-col items-center justify-start h-full mt-10 md:mt-20">
         <img
-          src={`${STATIC_ASSETS}/images/brand/lenstube.svg`}
-          alt="LensTube"
+          src={`${STATIC_ASSETS}/images/brand/nectarhub.svg`}
+          alt="Nectarhub"
           draggable={false}
           height={50}
           width={50}

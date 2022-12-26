@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import type { FC } from 'react'
 import React, { useEffect, useState } from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, TRACK } from 'utils'
 import { getIsSensitiveContent } from 'utils/functions/getIsSensitiveContent'
 import { getPublicationMediaUrl } from 'utils/functions/getPublicationMediaUrl'
@@ -14,7 +14,7 @@ import MetaTags from './MetaTags'
 import VideoOverlay from './VideoOverlay'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const VideoPlayer = dynamic(() => import('web-ui/VideoPlayer'), {

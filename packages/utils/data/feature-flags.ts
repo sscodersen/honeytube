@@ -1,10 +1,10 @@
 export const FEATURE_FLAGS = {
-  LENSTUBE_ECHOS: 'lenstube-echos'
+  NECTARHUB_ECHOS: 'nectarhub-echos'
 }
 
 export const featureFlags = [
   {
-    flag: FEATURE_FLAGS.LENSTUBE_ECHOS,
+    flag: FEATURE_FLAGS.NECTARHUB_ECHOS,
     enabledFor: ['0x2d']
   }
 ]

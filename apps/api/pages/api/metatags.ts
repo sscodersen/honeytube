@@ -1,7 +1,7 @@
 import getProfileMeta from 'lib/getProfileMeta'
 import getPublicationMeta from 'lib/getPublicationMeta'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { LENSTUBE_APP_DESCRIPTION } from 'utils'
+import { NECTARHUB_APP_DESCRIPTION } from 'utils'
 import getMetaTags from 'utils/functions/getMetaTags'
 import { getRandomProfilePicture } from 'utils/functions/getRandomProfilePicture'
 
@@ -31,17 +31,17 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     return res.setHeader('Content-Type', 'text/html').send(
       getMetaTags({
-        title: 'Lenstube',
-        description: LENSTUBE_APP_DESCRIPTION,
-        image: getRandomProfilePicture('Lenstube')
+        title: 'Nectarhub',
+        description: NECTARHUB_APP_DESCRIPTION,
+        image: getRandomProfilePicture('Nectarhub')
       })
     )
   } catch (error) {
     return res.setHeader('Content-Type', 'text/html').send(
       getMetaTags({
-        title: 'Lenstube',
-        description: LENSTUBE_APP_DESCRIPTION,
-        image: getRandomProfilePicture('Lenstube')
+        title: 'Nectarhub',
+        description: NECTARHUB_APP_DESCRIPTION,
+        image: getRandomProfilePicture('Nectarhub')
       })
     )
   }

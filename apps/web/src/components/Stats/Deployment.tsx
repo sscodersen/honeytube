@@ -32,7 +32,7 @@ const Deployment = () => {
       {GIT_DEPLOYED_COMMIT_SHA && (
         <span className="p-1 px-3 text-xs bg-secondary backdrop-blur-xl bg-opacity-70 rounded-lg dark:bg-theme">
           <Link
-            href={`https://github.com/lenstube-xyz/lenstube/commit/${GIT_DEPLOYED_COMMIT_SHA}`}
+            href={`https://github.com/nectarhub-xyz/nectarhub/commit/${GIT_DEPLOYED_COMMIT_SHA}`}
             target="_blank"
             rel="noreferer noreferrer"
           >

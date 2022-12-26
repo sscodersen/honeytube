@@ -7,11 +7,11 @@ import { PublicationTypes, useProfileCommentsQuery } from 'lens'
 import type { FC } from 'react'
 import React from 'react'
 import { useInView } from 'react-cool-inview'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   SCROLL_ROOT_MARGIN
 } from 'utils'
 
@@ -23,7 +23,7 @@ const CommentedVideos: FC<Props> = ({ channel }) => {
   const request = {
     publicationTypes: [PublicationTypes.Comment],
     limit: 32,
-    sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID],
+    sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID],
     customFilters: LENS_CUSTOM_FILTERS,
     profileId: channel?.id
   }
@@ -34,7 +34,7 @@ const CommentedVideos: FC<Props> = ({ channel }) => {
     skip: !channel?.id
   })
 
-  const channelVideos = data?.publications?.items as LenstubePublication[]
+  const channelVideos = data?.publications?.items as NectarhubPublication[]
   const pageInfo = data?.publications?.pageInfo
 
   const { observe } = useInView({

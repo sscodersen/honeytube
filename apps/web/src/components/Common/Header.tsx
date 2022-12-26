@@ -12,9 +12,9 @@ import React, { useState } from 'react'
 import {
   Analytics,
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_BYTES_APP_ID,
-  LENSTUBE_ROADMAP_URL,
+  NECTARHUB_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
+  NECTARHUB_ROADMAP_URL,
   STATIC_ASSETS,
   TRACK
 } from 'utils'
@@ -51,7 +51,7 @@ const Header: FC<Props> = ({ className }) => {
     variables: {
       request: {
         profileId: selectedChannel?.id,
-        sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID],
+        sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID],
         customFilters: LENS_CUSTOM_FILTERS
       }
     },
@@ -79,10 +79,10 @@ const Header: FC<Props> = ({ className }) => {
           <div className="md:w-[330px]">
             <Link href="/" className="block md:invisible">
               <img
-                src={`${STATIC_ASSETS}/images/brand/lenstube.svg`}
+                src={`${STATIC_ASSETS}/images/brand/nectarhub.svg`}
                 draggable={false}
                 className="w-5 h-5"
-                alt="lenstube"
+                alt="nectarhub"
               />
             </Link>
           </div>
@@ -99,7 +99,7 @@ const Header: FC<Props> = ({ className }) => {
             </Button>
             <Link
               className="rounded-lg hidden lg:block opacity-80 hover:opacity-100"
-              href={LENSTUBE_ROADMAP_URL}
+              href={NECTARHUB_ROADMAP_URL}
               onClick={() => Analytics.track(TRACK.SYSTEM.MORE_MENU.ROADMAP)}
               target="_blank"
             >

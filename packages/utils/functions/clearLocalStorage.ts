@@ -1,6 +1,6 @@
 const clearLocalStorage = () => {
   localStorage.removeItem('accessToken')
   localStorage.removeItem('refreshToken')
-  localStorage.removeItem('lenstube.store')
+  localStorage.removeItem('nectarhub.store')
 }
 export default clearLocalStorage

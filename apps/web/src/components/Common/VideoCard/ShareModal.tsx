@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { FC } from 'react'
 import React from 'react'
 import toast from 'react-hot-toast'
-import type { LenstubePublication } from 'utils'
-import { Analytics, LENSTUBE_WEBSITE_URL, STATIC_ASSETS, TRACK } from 'utils'
+import type { NectarhubPublication } from 'utils'
+import { Analytics, NECTARHUB_WEBSITE_URL, STATIC_ASSETS, TRACK } from 'utils'
 import { getSharableLink } from 'utils/functions/getSharableLink'
 import imageCdn from 'utils/functions/imageCdn'
 import useCopyToClipboard from 'utils/hooks/useCopyToClipboard'
@@ -15,7 +15,7 @@ import MirrorOutline from '../Icons/MirrorOutline'
 import MirrorVideo from '../MirrorVideo'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
   show: boolean
   setShowShare: React.Dispatch<boolean>
 }
@@ -24,7 +24,7 @@ const ShareModal: FC<Props> = ({ show, setShowShare, video }) => {
   const [copy] = useCopyToClipboard()
 
   const onCopyVideoUrl = async () => {
-    await copy(`${LENSTUBE_WEBSITE_URL}/watch/${video.id}`)
+    await copy(`${NECTARHUB_WEBSITE_URL}/watch/${video.id}`)
     toast.success('Link copied to clipboard')
     Analytics.track(TRACK.COPY.VIDEO_URL)
   }
@@ -121,7 +121,7 @@ const ShareModal: FC<Props> = ({ show, setShowShare, video }) => {
         </div>
         <div className="flex items-center justify-between p-2 border border-gray-200 rounded-lg dark:border-gray-800">
           <div className="text-sm truncate select-all">
-            {LENSTUBE_WEBSITE_URL}/watch/{video.id}
+            {NECTARHUB_WEBSITE_URL}/watch/{video.id}
           </div>
           <button
             className="ml-2 hover:opacity-60 focus:outline-none"

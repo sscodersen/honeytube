@@ -6,14 +6,14 @@ import ShareModal from '@components/Common/VideoCard/ShareModal'
 import { Button } from '@components/UIElements/Button'
 import type { FC } from 'react'
 import React, { useState } from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, TRACK } from 'utils'
 
 import PublicationReaction from './PublicationReaction'
 import TipModal from './TipModal'
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const VideoActions: FC<Props> = ({ video }) => {

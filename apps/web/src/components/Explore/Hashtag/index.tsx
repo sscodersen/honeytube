@@ -8,11 +8,11 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { useInView } from 'react-cool-inview'
 import Custom404 from 'src/pages/404'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import {
   LENS_CUSTOM_FILTERS,
-  LENSTUBE_APP_ID,
-  LENSTUBE_BYTES_APP_ID,
+  NECTARHUB_APP_ID,
+  NECTARHUB_BYTES_APP_ID,
   SCROLL_ROOT_MARGIN
 } from 'utils'
 
@@ -23,7 +23,7 @@ const ExploreHashtag = () => {
   const request = {
     type: SearchRequestTypes.Publication,
     limit: 32,
-    sources: [LENSTUBE_APP_ID, LENSTUBE_BYTES_APP_ID],
+    sources: [NECTARHUB_APP_ID, NECTARHUB_BYTES_APP_ID],
     customFilters: LENS_CUSTOM_FILTERS,
     query: hashtag
   }
@@ -37,7 +37,7 @@ const ExploreHashtag = () => {
 
   const videos =
     data?.search.__typename === 'PublicationSearchResult'
-      ? (data?.search?.items as LenstubePublication[])
+      ? (data?.search?.items as NectarhubPublication[])
       : []
   const pageInfo =
     data?.search.__typename === 'PublicationSearchResult'

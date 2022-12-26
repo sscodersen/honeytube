@@ -4,8 +4,8 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import Link from 'next/link'
 import type { FC } from 'react'
 import React, { useState } from 'react'
-import type { LenstubePublication } from 'utils'
-import { Analytics, LENSTUBE_BYTES_APP_ID, STATIC_ASSETS, TRACK } from 'utils'
+import type { NectarhubPublication } from 'utils'
+import { Analytics, NECTARHUB_BYTES_APP_ID, STATIC_ASSETS, TRACK } from 'utils'
 import { getIsSensitiveContent } from 'utils/functions/getIsSensitiveContent'
 import getProfilePicture from 'utils/functions/getProfilePicture'
 import getThumbnailUrl from 'utils/functions/getThumbnailUrl'
@@ -20,7 +20,7 @@ import VideoOptions from './VideoOptions'
 dayjs.extend(relativeTime)
 
 type Props = {
-  video: LenstubePublication
+  video: NectarhubPublication
 }
 
 const VideoCard: FC<Props> = ({ video }) => {
@@ -28,7 +28,7 @@ const VideoCard: FC<Props> = ({ video }) => {
   const [showReport, setShowReport] = useState(false)
 
   const isSensitiveContent = getIsSensitiveContent(video.metadata, video.id)
-  const isByte = video.appId === LENSTUBE_BYTES_APP_ID
+  const isByte = video.appId === NECTARHUB_BYTES_APP_ID
 
   const thumbnailUrl = imageCdn(
     isSensitiveContent

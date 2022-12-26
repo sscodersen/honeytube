@@ -7,7 +7,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import type { Attribute } from 'lens'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import type { LenstubePublication } from 'utils'
+import type { NectarhubPublication } from 'utils'
 import { Analytics, STATIC_ASSETS, TRACK } from 'utils'
 import { getTimeFromSeconds } from 'utils/functions/formatTime'
 import { getValueFromTraitType } from 'utils/functions/getFromAttributes'
@@ -16,7 +16,7 @@ import getThumbnailUrl from 'utils/functions/getThumbnailUrl'
 import imageCdn from 'utils/functions/imageCdn'
 dayjs.extend(relativeTime)
 
-const SuggestedVideoCard = ({ video }: { video: LenstubePublication }) => {
+const SuggestedVideoCard = ({ video }: { video: NectarhubPublication }) => {
   const [showReport, setShowReport] = useState(false)
   const [showShare, setShowShare] = useState(false)
   const isSensitiveContent = getIsSensitiveContent(video.metadata, video.id)
